@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test Page</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="module">
+        import createExternalRoot from '/src/components/mb-whatsnew-apply-search-filter.tsx';
+
+        const rootElement = document.querySelector("#app");
+        const component = createExternalRoot(rootElement);
+        
+        const mockContext = {
+            user: {
+                userGroups: []
+            },
+            config: {
+                applyFilters: [{
+                        "filterName": "created_on",
+                        "values": [{ "value": "thisyear" }]
+                }],
+                searchIdentifier: "nTp3azkSUU6lxBgXzIMGZg"
+            },
+            api: {
+                search: {
+                    addFilters: (searchIdentifier, filters) => {
+                        console.log("Mock addFilters called with:", searchIdentifier, filters);
+                    },
+                    getEventSearchIdentifier: (searchIdentifier) => searchIdentifier
+                }
+            },
+            client: {}
+        };
+
+        component.render(mockContext);
+    </script>
+</body>
+</html>
