@@ -1,5 +1,5 @@
 ch-apply-search-filters Component
-The mb-apply-search-filters is a React functional component designed to seamlessly integrate with Sitecore's ContentHub SDK. It listens for specific events, such as SEARCH_FINISHED, and applies pre-configured search filters based on the event details.
+The ch-apply-search-filters is a React functional component designed to seamlessly integrate with Sitecore's ContentHub SDK. It listens for specific events, such as SEARCH_FINISHED, and applies pre-configured search filters based on the event details.
 
 Features
 Event-Driven Filtering: The component listens to the SEARCH_FINISHED event. Once the event fires, it checks the event's search identifier and, if matching, applies the configured filters.
